@@ -644,7 +644,7 @@ static void show_single_user(short unr, char *call)
 	l	= user[x]->read_today;
       else
 	l	= uf.read_today;
-	if (l > 0 && uf.maxread_day > 0) {
+      if (l > 0 && uf.maxread_day > 0) {
 	wuser(unr, "Total/day   : ");
 	lwuser(unr, l);
 	wuser(unr, " of max. ");
@@ -1247,9 +1247,10 @@ void change_readlock(short unr, char *eingabe)
 
       for (x = 1; x <= MAXUSER; x++) {
 	if (user[x] != NULL) {
-	  if (!strcmp(user[x]->call, ufil.call))
+	  if (!strcmp(user[x]->call, ufil.call)) {
 	    user[x]->readlock = ufil.readlock;
 	    user[x]->login_priv = ufil.login_priv;
+	  }
 	}
       }
       save_userfile(&ufil);

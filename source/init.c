@@ -15,6 +15,8 @@
 #include <string.h>
 #include <sys/time.h>
 #include <sys/types.h>
+#include <time.h>
+
 #include "boxglobl.h"
 #include "boxlocal.h"
 #include "init.h"

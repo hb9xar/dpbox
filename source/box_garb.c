@@ -8,6 +8,8 @@
 /*                                                          */
 /************************************************************/
 
+#include <time.h>
+
 #define BOX_FILE_G
 #include "boxlocal.h"
 #include "boxglobl.h"
@@ -1533,9 +1535,10 @@ void garbage_collection(boolean xgar, boolean fill_cbyte, boolean check_all,
 		replace_x_nr(ct, new_ct);
 	    }
 
-	    if (copybuf != NULL)
+	    if (copybuf != NULL) {
 	      free(copybuf);
 	      copybuf = NULL;
+	    }
 	  }
 
 	} else {

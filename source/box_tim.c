@@ -10,6 +10,7 @@
 
 
 #include <unistd.h>
+#include <time.h>
 
 #define BOX_TIM_G
 #include "main.h"
@@ -335,10 +336,10 @@ static void show_mailbeacon2(char *ofiname)
 
   sfbread(true, ofiname, &btbuff, &btsize);
   if (btbuff == NULL) {
-    btbuff = malloc(4);
+    btbuff = malloc(5);
     if (btbuff != NULL) {
-      nstrcpy(btbuff, "NONE", 4);
-      btsize = 4;
+      nstrcpy(btbuff, "NONE", 5);
+      btsize = 5;
     }
   }
   if (btbuff != NULL) {

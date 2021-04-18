@@ -2,5 +2,33 @@ DPBOX 6.00 for 64-bit Systems
 -----------------------------
 
 - builds with RHEL8 compatible systems (CentOS, AlmaLinux, ...)
+- DPBOX is built and run as 32bit binary, so a 32bit runtime 
+  needs to be present (see below)
 - Software as running at HB9AJ
+
+
+Prepare then system for building and running
+--------------------------------------------
+- install runtime dependencies
+# yum install glibc.i686
+
+- install build dependencies
+# yum install glibc-devel.i686
+# yum install gcc make
+
+Build:
+$ make clean && make
+
+Install:
+- copy the following files to the box runtime directory:
+
+-rwxrwxr-x.  1 dpbox dpbox 1762988 Apr 18 19:51 dpbox
+-rwxrwxr-x.  1 dpbox dpbox   20436 Apr 18 19:51 dpputlinks
+-rwxrwxr-x.  1 dpbox dpbox   13712 Apr 18 19:51 dpcodeconv
+-rwxrwxr-x.  1 dpbox dpbox   33100 Apr 18 19:51 dpgate
+-rwxrwxr-x.  1 dpbox dpbox   21624 Apr 18 19:51 dpmybbs
+[dpbox@hb9aj source]$ cp -p dpbox dpputlinks dpcodeconv dpgate dpmybbs /home/dpbox/box/
+
+-rwxrwxr-x.  1 dpbox dpbox   47800 Apr 18 19:51 crawler
+[dpbox@hb9aj source]$ cp -p crawler /home/dpbox/box/crawler/
 

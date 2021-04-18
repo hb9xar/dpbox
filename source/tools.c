@@ -13,6 +13,8 @@
 #include <unistd.h>
 #include <time.h>
 #include <math.h>
+#include <time.h>
+
 #include "tools.h"
 #include "pastrix.h"
 #include "filesys.h"
@@ -72,12 +74,18 @@ char conv_umlaut_to_local(char code)
 
 void conv_string_from_local(char *s)
 {
-  while (*s) *s++ = conv_umlaut_from_local(*s);
+  while (*s) {
+    *s = conv_umlaut_from_local(*s);
+    s++;
+  }
 }
 
 void conv_string_to_local(char *s)
 {
-  while (*s) *s++ = conv_umlaut_to_local(*s);
+  while (*s) {
+    *s = conv_umlaut_to_local(*s);
+    s++;
+  }
 }
 
 boolean conv_file_umlaut(boolean to_local, char *fname)

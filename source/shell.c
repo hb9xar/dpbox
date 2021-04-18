@@ -6,6 +6,7 @@
 #ifdef LINUX26
 #define _XOPEN_SOURCE
 #define  __USE_XOPEN
+#define  __USE_XOPEN_EXTENDED
 #endif
 #include <stdlib.h>
 #include <fcntl.h>

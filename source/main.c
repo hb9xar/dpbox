@@ -42,6 +42,8 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <sys/un.h>
+#include <time.h>
+
 #include "main.h"
 #include "init.h"
 #include "box_init.h"
@@ -276,7 +278,7 @@ static int add_cr(char *filename,unsigned short *bodychecksum)
   }
 }
 
-short calc_usernr(console,channel)
+short calc_usernr(short console, short channel)
 {
   short usernr;
   

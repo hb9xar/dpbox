@@ -4915,7 +4915,7 @@ static void do_checkboards(short unr, boolean want, char *w)
 
 }
 
-static boolean may_invoke_xeditor(unr)
+static boolean may_invoke_xeditor(short unr)
 {
   if (!boxrange(unr)) return false;
   return (user[unr]->pchan == 0 && user[unr]->supervisor

@@ -25,6 +25,7 @@
 #include <dirent.h>
 #endif
 #include <utime.h>
+#include <time.h>
 
 #include "boxlocal.h"
 #include "pastrix.h"

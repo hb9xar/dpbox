@@ -11,7 +11,7 @@
 # definition. Simply replace "${PWD}/box" with the target directory.          #
 #                                                                             #
 boxdir		:= ${PWD}/box
-boxdir		:= /usr/local/ax25/src/flatboxdir
+#boxdir		:= /usr/local/ax25/src/flatboxdir
 #                                                                             #
 # This is not the author's choice, so, do not blame me for the result.        #
 #                                                                             #
@@ -59,14 +59,18 @@ sharedir   	= ${boxdir}
 docdir		= ${boxdir}/doc
 landir   	= ${boxdir}/language
 
+# for RHEL8, use:
+OMIT_W	= -Wno-unused-but-set-variable -Wno-format-overflow -Wno-format-truncation -Wno-pointer-sign
+# for RHEL7, use:
+#OMIT_W	= -Wno-unused-but-set-variable -Wno-pointer-sign
 
 DEFS		= $(NOSHELL)
 CC		= gcc
 CPP		= $(CC) -E
 #CFLAGS		= -Wall -O2 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
 #CRAWLERCFLAGS	= -Wall -O3 -funsigned-char -fomit-frame-pointer -fno-strength-reduce
-CFLAGS		= -m32 -Wall -g -funsigned-char -DLINUX26
-CRAWLERCFLAGS	= -Wall -g -funsigned-char
+CFLAGS		= -m32 -Wall -g -funsigned-char -DLINUX26 $(OMIT_W)
+CRAWLERCFLAGS	= -Wall -g -funsigned-char $(OMIT_W)
 LD		= $(CC)
 #LDFLAGS		= -s
 LDFLAGS		= -m32

@@ -269,7 +269,7 @@ void x_Vwuser(const short unr, const char *s, const boolean crlf, const boolean 
     } else if (WITH->umode == UM_FILESF) { /* this happens after forward conversion */
       if (strlen(WITH->spath) + strlen(s) < LEN_PATH) strcat(WITH->spath, s);
       else strcpy(WITH->spath, s);
-      immediate_extcheck = WITH->spath != '\0';
+      immediate_extcheck = (WITH->spath != NULL);
     }
     return;
   }
@@ -346,7 +346,7 @@ void chwuser(const short unr, char c)
       sprintf(s, "%c", c);    
       if (strlen(WITH->spath) + 1 < LEN_PATH) strcat(WITH->spath, s);
       else strcpy(WITH->spath, s);
-      immediate_extcheck = WITH->spath != '\0';
+      immediate_extcheck = (WITH->spath != NULL);
     }
     return;
   }

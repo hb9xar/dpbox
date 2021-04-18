@@ -44,6 +44,8 @@
 
 #define BOX_SUB_G
 #include <ctype.h>
+#include <time.h>
+
 #include "main.h"
 #include "box_sub.h"
 #include "crc.h"

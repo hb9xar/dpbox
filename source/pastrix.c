@@ -14,6 +14,8 @@
 
 #define PASTRIX_G
 #include <string.h>
+#include <time.h>
+
 #include "pastrix.h"
 #include "boxglobl.h"
 #include "boxlocal.h"
@@ -583,7 +585,7 @@ char upcase_(register char ch)
 
 void upper(char *s)
 {
-  while ((*s++ = upcase_(*s)));
+  while ((*s = upcase_(*s))) {s++;}
 }
 
 void strcpyupper(char *outs, char *ins)
@@ -593,7 +595,7 @@ void strcpyupper(char *outs, char *ins)
 
 void lower(char *s)
 {
-  while ((*s++ = lowcase(*s)));
+  while ((*s = lowcase(*s))) {s++;}
 }
 
 void strcpylower(char *outs, char *ins)
