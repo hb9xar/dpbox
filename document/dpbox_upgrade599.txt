@@ -1,0 +1,442 @@
+(DPTNT) HB9XAR de HB9AJ> (1 user)>
+DPTNT @DL        de:DL8HBS 27.03.00 00:46  30   2107 Bytes
+Kleine Hinweise zur Beta-Version v5.99.01
+*** Bulletin-ID: FS1Z74DL8HBS ***
+
+Read: 3
+Path: HB9AJ!HB9EAS!DB0CZ!DB0GE!DB0ME!DB0SGL!DB0FHK!DB0SIF
+Sent: 000327/0040z @:DB0SIF.#HES.DEU.EU [GIESSEN JO40IO] DP5.08 $:FS1Z74DL8HBS
+X-Info: User S&F received from DL8HBS at DB0SIF
+
+From: DL8HBS @ DB0SIF.#HES.DEU.EU (Joachim)
+To:   DPTNT @ DL
+
+Hallo,
+
+noch kleine Hinweise zur Beta-Version v5.99.01.
+
+Nach Moeglichkeit sollte nicht auf eine Vorgaengerversion zurueckgeschaltet
+werden, nachdem man auf v5.99.01 aktualisiert hat. Grund ist das geaenderte
+Format von stat/hpath.box. Diese Datei sollte man vor dem Update auf jeden
+Fall sichern, und wenn man unbedingt meint, wieder die alte Version verwenden
+zu wollen, sollte man das alte hpath.box wieder restaurieren.
+
+Weiterhin kann es nach dem ersten Starten der neuen Version nach etwa 15
+Minuten zu einem automatischen Aufraeumen kommen. Nicht erschrecken, das ist
+normal. Das passiert fortan auch alle 5 Tage automatisch, sofern nicht in der
+Zwischenzeit sowieso die Garbage collection aktiviert wurde (meist ja nachts
+um 2 oder 3 UTC).
+
+Diese Version beherrscht wieder den WP-Austausch. Bitte mal mit einem
+FBB-Nachbarn testen und mir bei Problemen bescheid geben.
+
+Die Datei system/wpfor.box wird automatisch beim ersten Starten geloescht. Die
+Definition der WP-Nachbarn geschieht nun halbautomatisch in den einzelnen
+SF-Dateien der Nachbarn. Siehe Installationshinweise.
+
+Immer dran denken: diese DPBOX-Version (5.99.01) ist laufzeitbeschraenkt bis
+zum 30.4.2000. Wer sie installiert, muss vorher dann auch die Endversion v6.00
+installieren.
+
+Und bitte die neuen Parameter in system/config.box beachten.
+
+73 Joachim, DL8HBS
+
+DPTNT @DL        de:DL8HBS 27.03.00 00:46  30   3513 Bytes
+Info Beta-Version DPBOX v5.99.01
+*** Bulletin-ID: FS1THJDL8HBS ***
+
+Read: 3
+Path: HB9AJ!HB9EAS!DB0CZ!DB0GE!DB0ZDF!DB0GV!DB0SIF
+Sent: 000327/0040z @:DB0SIF.#HES.DEU.EU [GIESSEN JO40IO] DP5.08 $:FS1THJDL8HBS
+X-Info: User S&F received from DL8HBS at DB0SIF
+
+From: DL8HBS @ DB0SIF.#HES.DEU.EU (Joachim)
+To:   DPTNT @ DL
+
+Hallo,
+
+ich schicke euch hier in einer weiteren Nachricht als tgz-Binaerarchiv die
+Betaversion DPBOX v5.99.01.
+
+DIESE VERSION IST IN DER LAUFZEIT BESCHRAENKT UND KANN NUR BIS ZUM 30. APRIL
+CONNECTED WERDEN.
+
+Natuerlich kann man die Beschraenkung ganz einfach im Source aufheben, das ist
+aber nicht der Sinn der Sache. Wer diese Version testen will, spiele bis zu
+dem Datum dann bitte die endgueltige Version v6.00 ein.
+
+Der Hintergrund ist der in dieser Version erstmals verwendete aktive Router.
+Sollte sich durch den Test ergeben, dass hier noch Modifikationen noetig sind,
+waere ein Verwenden aelterer Versionen extrem hinderlich.
+
+Die Version v6.00 wird die letzte DPBOX-Version sein, die ich herausgeben
+werde. DPBOX steht seit etlichen Jahren unter der GPL, sie wird auch von mir
+nur im Source veroeffentlicht, etwaige spaetere Aenderungen koennen also durch
+jeden durchgefuehrt werden. Es waere aber natuerlich ratsam, wenn sich zu dem
+Zweck ein Maintainer faende.
+
+Vielleicht nutzen wir die Zeit bis zum 30.04 gemeinsam, noch verbliebene
+Fehler zu beheben und jemanden auszuschauen, der bei Problemen weiter als
+Ansprechpartner helfen moechte. Ich werde es definitiv ab dem 1.5.2000 nicht
+mehr tun.
+
+Wie schon angesprochen besteht die wesentliche Neuerung der v6.00 im aktiven
+Routing von zielgerichteten Nachrichten. Dazu wird ein aktives Routerprotokoll
+verwendet, das auf WPROT von OE3DZW aufsetzt. Bayboxen koennen das leider noch
+nicht, irgendwie ist die Arbeit zwischen Dietmar und mir mittendrin
+unterbrochen worden. Dank der Flexibilitaet des WPROT-Protokolls stoeren sich
+die Bayboxen aber zum Glueck nicht an den DPBOX-Router-Meldungen.
+
+Der Feldtest mit mittlerweile sieben DPBOXen fuer das aktive Routing lief seit
+nunmehr sechs Wochen sehr erfolgreich, aber bevor ich hier endgueltig QRT
+mache, moechte ich noch die Moeglichkeit haben, kleinere Korrekturen vornehmen
+zu koennen. Deswegen wuerde ich mich freuen, wenn moeglichst viele
+DPBOX-Standorte an dem Test teilnehmen koennten, auch wenn es dann doppelte
+Arbeit durch die Installation einer Endversion macht.
+
+Ich werde in einer weiteren Mail an dieser Stelle die Konfiguration der neuen
+Version beschreiben, sofern sie nicht schon aus der neuen Config.box
+hervorgeht.
+
+Noch eine Anmerkung: Da der aktive Router, sofern eingeschaltet, den Sysops
+keine Einflussmoeglichkeit mehr fuer im Routing bekannte Ziele bietet, sind
+dann auch saemtliche Moeglichkeiten deaktiviert, Usermails bestimmter Benutzer
+oder von bestimmten Boxen oder an bestimmte Ziele anzuhalten oder
+zurueckzuweisen. Meine Haltung war das schon immer, wer Probleme damit hat,
+aktiviere besser nicht den aktiven Router.
+
+Durch das Routing-Protokoll entstehen pro Tag ca. 15 KByte auszutauschender
+Meßdaten pro Nachbar-DPBOX.
+
+Viel Erfolg bei der Installation,
+
+73 Joachim, DL8HBS
+
+DPTNT @DL        de:DL8HBS 27.03.00 00:47 180   6349 Bytes
+Funktionsweise des aktiven Routing
+*** Bulletin-ID: FS1YUEDL8HBS ***
+
+Read: 3
+Path: HB9AJ!HB9EAS!DB0CZ!F6KFG!DB0GE!DB0ZDF!DB0SRS!DB0SIF
+Sent: 000327/0040z @:DB0SIF.#HES.DEU.EU [GIESSEN JO40IO] DP5.08 $:FS1YUEDL8HBS
+X-Info: User S&F received from DL8HBS at DB0SIF
+
+From: DL8HBS @ DB0SIF.#HES.DEU.EU
+To:   DPTNT @ DL
+
+Dies ist eine sehr verkuerzte Darstellung des aktiven Routing ab der aktuellen
+DPBOX-Beta-Version v5.99.01. Es existiert eine etwas umfassendere auf
+Englisch, diese liegt auch dem Source-Archiv bei, aber sie ist nicht mehr auf
+dem letzten Stand. Der Version 6.00 werde ich die genaue Beschreibung des
+endgueltigen Protokolls beilegen.
+
+DPBOX verwendet ja schon immer einen Autorouter, wozu also noch einer?
+
+Der passive, bisher verwendete Autorouter (Parameter SMART_ROUTING) von DPBOX
+funktioniert zwar zu jedem bekannten Ziel, aber er hat so gravierende
+Nachteile, dass ich ihn immer nur als Notbehelf empfohlen habe, wenn die
+manuellen Routing-Definitionen keine Route enthielten.
+
+Das ist auch weiterhin so.
+
+Aktiviert man nun aber den aktiven Router, so misst jede DPBOX staendig die
+aktuelle Bandbreite zu allen direkten Nachbarn. Diese Messungen werden in
+einem Intervall von 5 Stunden allen anderen Boxen mit aktivem Router
+mitgeteilt. Die Messung der Verbindungsbandbreite geschieht in
+Vorwaertsrichtung der Route. Normalerweise werden fuer die Messung einfach die
+im SF uebertragenen Dateien verwendet. Stehen fuer mehr als 4 Stunden keine
+Nachrichten fuer diese Strecke an, wird ein Dummy-Linktest erzeugt. Bei
+Nachbarn mit FBB-Protokoll ist dies zur Zeit nur ein Fuenfervorschlag (etwa
+250 Bytes), nach Bestaetigung durch den Nachbarn wird sofort disconnected.
+Bei Nachbarn mit ASCII-Forward wird eine 2000 Bytes lange Dummy-Nachricht mit
+Lifetime 1 als private Nachricht an das Brett "W" der Nachbarbox geschickt.
+Diese sollte in ihrem eigenen Interesse diese Nachrichten nicht zurueckweisen,
+denn in dem Fall wird die Verbindungsqualitaet nur durch den etwa 40 Bytes
+langen SEND-Vorschlag gemessen. Dies erzeugt viel zu schlechte Qualitaeten und
+dadurch eventuell unnoetig schlechte Routen.
+
+Die Messwerte von 5 Stunden werden nun also gemittelt und als Route-Broadcast
+an diejenigen Nachbarboxen gesendet, die ebenfalls einen aktiven Router
+besitzen. Liegt dort nicht schon ein besserer Messwert vor, werden diese Werte
+nach spaetestens 30 Minuten an die dortigen Nachbarn weiterverteilt. Auf diese
+Weise breitet sich eine Broadcast-Welle im Netz aus.
+
+Die empfangenen Werte werden allerdings nicht sofort fuer das Routing
+verwendet. Es wird im Gegenteil noch bis zum Eintreffen einer neuen
+Broadcast-Welle (also von Messwerten fuer dieselben Boxen mit einem neueren
+Zeitstempel) darauf gewartet, ob von einem anderen Partner noch bessere
+Qualitaeten fuer die Ziele gemeldet werden.
+
+Erst beim Eintreffen der neuen Welle wird dann tatsaechlich das Routing auf
+den besten Pfad umgeschaltet. Dies geschieht also typischerweise fuenf Stunden
+nach dem Eintreffen der ersten Messwerte der ersten Welle.
+
+Bei Eingabe des Befehls ROUTES werden die tatsaechlich verwendeten Routen
+angegeben, bei Eingabe von ROUTES TABLE werden hingegen die aktuellen
+Messwerte fuer die Nachbarboxen angezeigt, diese sind also fuenf Stunden
+juenger und koennen andere Werte ergeben.
+
+Die Routen zu direkten Nachbarn werden bei der Berechnung gegenueber den
+Routen zu diesen Nachbarn ueber andere Boxen stark bevorrangt (etwa Faktor
+2,5). Ansonsten findet bei jeder Zwischenstation eine Verschlechterung der
+Qualitaet um den Fixwert 100 sowie den relativen Wert 10% statt. Ausserdem
+wird natuerlich bei jeder Zwischenstation noch die Qualitaet des neu
+hinzugekommenen Links beaufschlagt.
+
+Im Ergebnis fuehrt dies alles dazu, dass die Routen zu bekannten Zielen sich
+flexibel den aktuellen Linkqualitaeten und -ausfaellen anpassen und
+automatisch den schnellsten Weg waehlen. Neu hinzukommende Boxen muessen nicht
+konfiguriert werden, und wegfallende nicht ausgetragen werden. Das Routing ist
+schleifenfrei, und wenn eine Route angezeigt wird, besteht sie auch. Dies kann
+jederzeit mit PING getestet werden.
+
+Alles in allem duerfte der Wartungsaufwand einer DPBOX dadurch gegen Null
+tendieren, auch ohne Nachteile fuer die Nachbarn oder Benutzer.
+
+Die zusaetzliche Datenmenge fuer das Router-Protokoll ist minimal, und die
+langsame Aktualisierung gewollt. Diese entspricht einem Store&Forward-System
+recht gut. Kurze Linkausfaelle werden so ueberbrueckt und schwankende Routen
+vermieden.
+
+Noch ein Hinweis zum Aktivieren des Routings: Wenn eine Box neu in das aktive
+Routing-Netz geht, ist sie erst nach etwa 12,5 Stunden bei anderen Boxen
+bekannt. Bis dahin wird ueber die normalen SF-Definitionen geroutet. Schaltet
+eine Box das aktive Routing aus, uebernehmen deren Nachbarn mit aktivem Router
+nach 24 Stunden die Routing-Meldungen fuer dieses nun passive Ziel. Geht eine
+Box komplett vom Netz, ist sie noch fuer drei Tage als Ziel im Netz bekannt,
+die Nachrichten stapeln sich dann bei der letzten Box, ueber die noch ein
+Route-Broadcast von dieser Box gemeldet wurde. Danach wird nur noch ueber die
+normalen SF-Definitionen (ins Nirwana) geroutet.
+
+Dann mal viel Spass beim Testen. Ich hoffe, es werden sich keine gravierenden
+Probleme mehr zeigen. Das Testnetz aus sieben Boxen quer in DL hat sich in den
+letzten Wochen gut gehalten. Schleifen sind nur einmal aufgetreten, bei der
+Aktivierung einer neuen Box, aber ich hoffe, auch das nun im Source verhindert
+zu haben. Schlimmer als das per Hand eingestellte Routing kann es eigentlich
+auch nicht werden :) , ich denke sogar, es wird erheblich besser. Und im
+Notfall kann man den aktiven Router ja deaktivieren, dann laeuft alles so wie
+bisher.
+
+Achso: und nicht gleich irritiert sein, wenn die Routen bisweilen andere Wege
+ergeben, als sie nach Landkarte und Gefuehl zu sein haetten. Das ist bei
+Routern immer so, die sehen die Welt meist anders als wir Menschen.
+
+73 Joachim, DL8HBS
+
+DPTNT @DL        de:DL8HBS 27.03.00 00:47  30   7176 Bytes
+Installation Beta-Version DPBOX v5.99.01
+*** Bulletin-ID: FS1WVODL8HBS ***
+
+Read: 3
+Path: HB9AJ!HB9EAS!DB0CZ!DB0GE!DB0ZDF!DB0SRS!DB0SIF
+Sent: 000327/0040z @:DB0SIF.#HES.DEU.EU [GIESSEN JO40IO] DP5.08 $:FS1WVODL8HBS
+X-Info: User S&F received from DL8HBS at DB0SIF
+
+From: DL8HBS @ DB0SIF.#HES.DEU.EU
+To:   DPTNT @ DL
+
+Zur Installation der Beta-Version v5.99.01:
+
+Source-Archiv wie gewohnt auspacken und compilieren, binaries dann
+nach dem bevorzugten Verfahren installieren.
+
+system/config.box sowie system/commands.box anpassen. Bei config.box sind eine
+ganze Reihe Parameter am Ende der Datei hinzugekommen. Je nachdem, von welcher
+DPBOX-Version man aktualisiert, muessen also mehr oder weniger viele Parameter
+in die verwendete config.box hinzugefuegt werden. Es stehen Versionsangaben
+ueber den Parametern.
+
+Bei commands.box sind die Befehle ROUTE 128 0 1 sowie PING 129 0 1
+hinzugekommen. Bitte eintragen.
+
+Die anderen config-Dateien sind zumindest ab v5.08 unveraendert geblieben, auch
+die mitgepackten Sprachdateien sind vorerst unveraendert.
+
+Wer von v5.07 umsteigt, muss _unbedingt_ dpbox.ini an die neue Installation
+anpassen. Ab v5.08 hat sich da aber nichts geaendert.
+
+Die einzige wesentliche Aenderung bei der Konfiguration bezieht sich auf die
+.SF-Dateien der eigenen Nachbarn. Dort sind drei Parameter hinzugekommen.
+
+Die neuen Parameter für .SF-Dateien:
+
+MYBBS
+
+Mit MYBBS wird von nun an gesteuert, ob diese Nachbarbox Mybbs-Infos (und
+Remote-Erases) bekommen soll. Fehlt dieser Parameter oder ist er
+auskommentiert, bekommt sie keine Infos. Da es drei verschiedene Verfahren fuer
+den Austausch von MYBBS-Infos gibt (M-Files, WP-Files, W-Files (W ist WPROT))
+und leider DPBOX nicht automatisch zwischen M und WP entscheiden kann, ist
+folgende Angabe für DieBox-Nachbarn notwendig:
+
+MYBBS EM
+
+Dadurch werden die Mybbs-Infos als M-Meldung verschickt.
+
+Fehlt das EM, werden die Mybbs-Infos je nach automatisch erkanntem Typ der
+Nachbarbox als WP- (FBB, DPBOX alt) oder WPROT-Nachrichten (DPBOX neu, Baybox)
+verschickt.
+
+Eintraege wie NOTRUBRIK E M WP W sind BITTE! zu streichen. Sie ergeben keinen
+Sinn mehr und behindern nur die automatische Konfiguration.
+
+Dann gibt es noch den neuen Parameter
+
+USERSF
+
+Steht der in einer .SF-Datei, wird der entsprechende Nachbar wie ein Benutzer
+im User-SF behandelt. Man sollte das also nur fuer Benutzer verwenden, denen
+man einen nahezu vollstaendigen SF anbieten moechte, niemals aber fuer "echte"
+Boxen. Unter anderem darf der Nachbar dann keinen Third-Party-Traffic
+weiterleiten, und ueberhaupt sieht eigentlich alles so aus wie im User-SF, bis
+auf den Unterschied, dass man Verteiler definieren kann, die diesem im SF
+zugesandt werden.
+
+Ausserdem gibt es den Parameter
+
+ROUTING_GUEST
+
+Den bitte BITTE nur dann verwenden, wenn bei der Nachbarbox jemand an der
+Implementierung des aktiven Routing arbeitet. Solange die Nachbarbox naemlich
+keine eigenen Routing-Infos schickt, bekommt sie auch noch keine von DPBOX.
+Ist dieser Parameter in der .SF-Datei vorhanden, wird trotzdem der volle Satz
+an Router-Meldungen an diesen Nachbarn geschickt.
+Im Normalfall hat dieser Parameter also nichts in der Datei zu suchen.
+
+---------------
+
+Ansonsten schaut euch bitte die neuen Parameter in config.box an, die sind auch
+jeweils erlaeutert.
+
+Das aktive Routing aktiviert man mit "ACTIVE_ROUTING ON".
+
+Wenn es aktiviert ist, werden im Board "W" in den WPROT-Meldungen nicht nur die
+Mybbs-Meldungen uebertragen, sondern zusaetzlich auch die Router-Meldungen mit
+den Messwerten fuer die Uebertragungsbandbreite zwischen den einzelnen Boxen.
+
+Diese Nachrichten werden alle 30 Minuten ausgetauscht.
+
+Das Routing konfiguriert sich fuer neu hinzukommende Nachbarn automatisch.
+
+Trotz aktivem Routing muessen aber weiterhin noch die Ziele in den SF-Dateien
+konfiguriert werden, insbesondere fuer Ziele im nicht deutschsprachigen Raum.
+Das aktive Routing deckt nur alle Boxen ab, die mit der neuen DPBOX-Version
+betrieben werden oder deren direkte Nachbarn sind.
+
+Eigentlich muss also bei einem Update an den Zieldefinitionen nichts geaendert
+werden, habt aber ein besonderes Auge auf die NOT- bzw. NOTFOR-Definitionen
+(sind Synonyme). Sofern sinnvoll moeglich, sollten diese entfernt werden,
+momentan koennen die noch Ziele im aktiven Routing beeinflussen, und das darf
+eigentlich nicht sein (so kann man naemlich Schleifen konfigurieren). Werft die
+also fuer Ziele im deutschsprachigen Raum nach Moeglichkeit raus.
+
+---------------
+
+Die eigene Routing-Tabelle kann man wie folgt anzeigen lassen:
+
+ROUTES                zeigt alle bekannten Ziele mit Hop-Count und Qualitaet
+                      an. DPBOXen, die aktive Router sind, sind durch ein '+'
+		      markiert. Gibt man hier noch einen Praefix mit folgendem
+		      '*' hinter dem Befehl an, werden nur die Ziele mit diesem
+		      Praefix angezeigt (Beispiel: "ROUTES DB*" ).
+
+ROUTES TABLE          zeigt die Linkqualitäten zu allen direkten Nachbarn an.
+                      Angegeben werden hier Halbstundenwerte fuer die letzten
+		      fuenf Stunden. Dies sind gemessene Bandbreiten, die
+		      Zahlen geben die Zeit in Sekunden fuer die Uebertragung
+		      von 100 KByte an. Fuer das Routing wird ein gewichteter
+		      Mittelwert verwendet, dieser steht an erster Stelle der
+		      Tabelle. Ausserdem wird durch ein kleines 'r' angezeigt,
+		      dass der jeweilige Nachbar selber das aktive
+		      Routing-Protokoll beherrscht, ein 'p' zeigt hingegen an,
+		      dass es sich um ein "Phantom" handelt, fuer den sich die
+		      eigene Box verantwortlich fuehlt Messwerte zu erzeugen.
+		      Steht dort kein Buchstabe, ist der Link bereits ueber 24
+		      Stunden inaktiv, dann werden auch keine "Phantom"-
+		      Messwerte mehr uebertragen.
+
+ROUTES BOXCALL        Zeigt (sofern in config.box mit ROUTING_STATS ON
+                      aktiviert) eine grafische Auswertung der
+		      Verbindungsqualitaet zu BOXCALL ueber den letzten Monat
+		      an. Man kann auch noch eine Zahl hinter den Befehl
+		      setzen, dadurch wird dann die Qualitaet nur fuer die
+		      entsprechende Anzahl Tage ausgegeben.
+
+Genauere Infos erhält man ebenfalls bei "BBS BOXCALL".
+
+Der neue Befehl PING tut, was er verspricht: Er schickt eine PING-Anforderung
+an eine Zielbox (z.B. "PING DB0GR"). Sofern dort ein PING-Server installiert
+ist (alle neuen Bayboxen, neue DPBOXen, viele FBB-Boxen) wird diese Anforderung
+dort beantwortet. Liegt eine DieBox auf der Wegstrecke dorthin, wird die
+Anforderung _nicht_ von FBB-Boxen beantwortet. Ist bei der Zielbox kein
+PING-Server installiert (alte DPBOXen, alte Bayboxen, etliche FBB-Boxen),
+erhaelt man von dort zumindest noch eine Bestaetigung auf die Anforderung, der
+man aber sonst keine weiteren Daten ueber Laufzeit und Route entnehmen kann.
+
+Soviel zur Installation. Viel Erfolg.
+
+73 Joachim, DL8HBS
+
+
+(DPTNT) HB9XAR de HB9AJ> (2 user)>
+DPTNT @DL        de:DL8HBS 27.03.00 12:33  30   1590 Bytes
+RE: Neue Versionen im Internet
+*** Bulletin-ID: FS2WRMDL8HBS ***
+
+Read: 3
+Path: HB9AJ!HB9EAS!F6KDL!F6KVE!F6KFT!DB0GE!DB0ZDF!DB0SRS!DB0SIF
+Sent: 000327/1224z @:DB0SIF.#HES.DEU.EU [GIESSEN JO40IO] DP5.99 $:FS2WRMDL8HBS
+X-Info: User S&F received from DL8HBS at DB0SIF
+
+From: DL8HBS @ DB0SIF.#HES.DEU.EU
+To:   DPTNT @ DL
+
+Hallo,
+
+OE3KLU@OE3XKR schrieb in MSG $FS2BUPOE3XKR an DPTNT@DL:
+> Stellt von EUCH jemand die neunen Versionen (test + Final)
+> ins Internet (und wo?) habe einige bekannte in Uebersee die
+
+der Fileserver von DB0SIF ist im Internet per Anonymous-FTP erreichbar.
+DPBOX liegt dort unter
+
+    ftp://db0sif.ernaehrung.uni-giessen.de/pub/main/dpbox/dpbox59901.tgz
+
+> mit DPBOX arbeiten und die sollte man ja nicht ausschliesen
+
+Ich würde es nicht empfehlen, diese Betaversion einzusetzen, wenn man
+nicht an dem Test bis zum 30.4. teilnimmt. Da wuerde ich doch auf die
+endgueltige Version warten.
+
+> leider wurde die letzte Version (5.08.09)  nie auf der Author
+> seite zur verfuegung gestellt ->
+
+Nein, weil sie auch nie wirklich fertig war. Was auf der Seite steht, taucht
+z.B. auch in Linux-Distributionen auf. Das wollte ich aber nicht. Im Fileserver
+von db0sif steht sie aber.
+
+> Danke Charly oe3klu @ oe3xkr
+
+73 Joachim, DL8HBS
+
+
+(DPTNT) HB9XAR de HB9AJ> (2 user)>TIMEOUT
+
+//COMP 0
+
+*** reconnected to HB9AJ
+=>
+'ul' is no command
+=>
+ p port name       fm        via       lst srv lst  p to
+ 2:BBS-Link        HB9AJ-11            <-> con <->  1:HB9ZRH
+ 2:BBS-Link        HB9AJ-10            <-> con <->  1:HB9ZRH
+ 2:BBS-Link        HB9AJ-12            <-> con <->  1:HB9ZRH
+ 0:User-Port       HB9XAR              <-> con
+=>
+Link to       dst  Q/T    rtt    tx connect   tx   rx   txq/rxq  rr+%  bit/s
+
+ 1:HB9ZRH      25 I   3   2/2     0  3d 06h   16M 8.5M   98/99    2.0    704
+ 1:HB9ZRH     597 F   3   3/3     0  3d 06h   16M 8.5M   98/99    2.0    704
+
