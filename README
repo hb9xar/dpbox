@@ -17,6 +17,7 @@ Prepare then system for building and running
 # yum install gcc make
 
 Build:
+$ cd source
 $ make clean && make
 
 Install:
