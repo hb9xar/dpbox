@@ -1,0 +1,62 @@
+Short documentation for boxstart
+--------------------------------
+(Mark Wahl, DL4YBG, last update 08.02.96)
+
+'boxstart' is a kind of watchdog-program, which checks frequently, if all
+programs of your TNT/DPBox-configuration are still running. If not, the
+missing programs will be restarted.
+
+The function of boxstart is quite simple. TNT, DPBox and TFKISS put their
+own process-id in a file. Now boxstart checks for this file for each of the
+programs. Several cases are possible:
+
+1. program was never run
+   No pid-file is found -> start program
+2. program exited by error (segmentation fault)
+   pid-file is existing, but process is not active -> start program
+3. program exited because of ordinary termination
+   pid-file was erased -> start program
+4. program still running
+   pid-file found and process still running -> do nothing
+
+Now boxstart needs the information where the pid-file can be found and which
+program shall be started, if the pid-file was not found or the process was
+not active.
+This information must be put into 'boxstart.ini', line by line for each
+program you want to watch.
+
+Sample boxstart.ini:
+# process-id file for first program
+/work2/box/stat/dpbox.pid
+# first program
+/work2/dpbox/dpbox
+# process-id file for second program
+/work/tnt/tnt.pid
+# second program
+/work2/tnt/tnt -u </dev/tty7 >/dev/tty7 &
+<EOF>
+
+In the sample file you see that TNT is using an empty tty for stdout/stdin
+and is started as a background process. So you don't block a login-console
+with TNT. But it is important that no getty-process is running on this tty.
+In addition it is advisable to give a '-u' in the tnt-command-line. Otherwise
+you will not be able to restart tnt after a crash because of the lockfile!
+
+Now you are able to generate your own config-file. Be sure that all paths
+and filenames are consistant with the configuration-files of TNT, DPBox and
+TFKISS, otherwise accidently a program can be started more than once.
+
+boxstart itself terminates after one run through the config-file. Therefore
+it must be put into a cron-job. You can use therefore 'crontab -e' or simply
+add the following lines to your crontab-file
+(usually in /usr/spool/cron/crontabs/root):
+
+# Run the 'boxstart' program every 5 minutes
+0,5,10,15,20,25,30,35,40,45,50,55 * * * *      /work2/boxstart/boxstart -i /work2/boxstart/boxstart.ini
+
+Surely you must update the paths to the directory where boxstart resides on
+your system.
+
+For feedback write to: DL4YBG @ DB0GR.#BLN.DEU.EU (AX25)
+                       wahlm@berlin.snafu.de  
+                       wahlm@zelator.berlinet.de
